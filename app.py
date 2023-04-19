@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import pyperclip
 from PC_Converter_for_web_class import Nccatcher
+from time import sleep
 
 st.title('ココネクフォーマット')
 
@@ -22,6 +23,4 @@ if get_button and len(asset['-input-']) > 0:
         convert = Nccatcher(target_json)
         print(convert.ch_data_js)
         pyperclip.copy(str(convert.ch_data_js).replace("'", '"'))
-
-
-
+sleep(5)
