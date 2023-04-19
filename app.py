@@ -20,7 +20,7 @@ if get_button and len(asset['-input-']) > 0:
     if 'https://charasheet.vampire-blood.net' in target and target_json['game'] == 'nechro':
         convert = Nccatcher(target_json)
         clip = str(convert.ch_data_js).replace('\'', '"')
-        pyperclip.copy(clip)
+        pyperclip.copy("get")
 
 
 
