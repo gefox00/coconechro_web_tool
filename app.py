@@ -1,5 +1,4 @@
 import streamlit as st
-import json
 import requests
 import pyperclip
 from PC_Converter_for_web_class import Nccatcher
