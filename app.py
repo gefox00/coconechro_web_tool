@@ -1,6 +1,5 @@
 import streamlit as st
 import requests
-import pyperclip
 from PC_Converter_for_web_class import Nccatcher
 from time import sleep
 
@@ -21,6 +20,6 @@ if get_button and len(asset['-input-']) > 0:
     print('https://charasheet.vampire-blood.net' in target)
     if 'https://charasheet.vampire-blood.net' in target and target_json['game'] == 'nechro':
         convert = Nccatcher(target_json)
-        print(convert.ch_data_js)
-        pyperclip.copy(str(convert.ch_data_js).replace("'", '"'))
+        st.write('下記の文字列をコピーしてココフォリアに張り付けてください')
+        st.write(str(convert.ch_data_js).replace("'", '"'))
 sleep(5)
