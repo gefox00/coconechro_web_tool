@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
+import pyperclip
 from PC_Converter_for_web_class import Nccatcher
-from time import sleep
 
 st.title('ココネクフォーマット')
 
@@ -17,9 +17,11 @@ get_button = st.button(label='変換結果をコピー', key='-convert-')
 if get_button and len(asset['-input-']) > 0:
     target = asset['-input-'] + '.js'
     target_json = requests.get(target).json()
-    print('https://charasheet.vampire-blood.net' in target)
     if 'https://charasheet.vampire-blood.net' in target and target_json['game'] == 'nechro':
         convert = Nccatcher(target_json)
-        st.write('下記の文字列をコピーしてココフォリアに張り付けてください')
-        st.write(str(convert.ch_data_js).replace("'", '"'))
-sleep(5)
+        clip = str(convert.ch_data_js).replace('\'', '"')
+        pyperclip.copy(clip)
+
+
+
+
