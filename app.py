@@ -12,7 +12,7 @@ st.write('https://charasheet.vampire-blood.net/')
 # セッションのコンポーネントのアクセスを簡略化
 asset = st.session_state
 
-get_button = st.button(label='変換結果をコピー', key='-convert-')
+get_button = st.button(label='変換', key='-convert-')
 # イベント処理
 if get_button and len(asset['-input-']) > 0:
     target = asset['-input-'] + '.js'
@@ -20,7 +20,8 @@ if get_button and len(asset['-input-']) > 0:
     if 'https://charasheet.vampire-blood.net' in target and target_json['game'] == 'nechro':
         convert = Nccatcher(target_json)
         clip = str(convert.ch_data_js).replace('\'', '"')
-        pyperclip.copy("get")
+        st.write('変換結果を表示します以下の文字列をコピーしてココフォリアに張り付けてください')
+        st.text_area(clip)
 
 
 
