@@ -14,8 +14,8 @@ asset = st.session_state
 
 get_button = st.button(label='変換', key='-convert-')
 # save_file = st.checkbox(label='ファイルに保存する')
-if save_file:
-    st.download_button(label='保存', key='-save-')
+# if save_file:
+#     st.download_button(label='保存', key='-save-')
 # イベント処理
 if get_button and len(asset['-input-']) > 0:
     target = asset['-input-'] + '.js'
