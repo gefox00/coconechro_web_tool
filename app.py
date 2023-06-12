@@ -13,8 +13,6 @@ st.write('https://charasheet.vampire-blood.net/')
 asset = st.session_state
 get_button = st.button(label='変換', key='-convert-')
 # イベント処理
-
-
 if get_button and len(asset['-input-']) > 0:
     target = asset['-input-'] + '.js'
     target_json = requests.get(target).json()
