@@ -9,13 +9,12 @@ st.text_input(label='変換したいキャラシのURLを入力', key='-input-')
 st.write('このツールはキャラクター保管所（下記URLのサイト）の')
 st.write('ネクロニカのキャラクターをココフォリアの駒に変換するためのツールです')
 st.write('https://charasheet.vampire-blood.net/')
-st.write('サンプルキャラクター\n　しかばねソロリティ　　　　https://charasheet.vampire-blood.net/4634412'
-         '\n　ひきがねコート　　　　https://charasheet.vampire-blood.net/4634377'
-         '\n　つぎはぎアリス　　　　https://charasheet.vampire-blood.net/4634334'
-         '\n　きぐるいジャンク　　　https://charasheet.vampire-blood.net/2116483'
-         '\n　すてねこオートマトン　https://charasheet.vampire-blood.net/2116446'
-         '\n')
-st.write('')
+st.write('サンプルキャラクター\n　しかばねソロリティ　　　　https://charasheet.vampire-blood.net/4634412\n'
+         '\n　ひきがねコート　　　　https://charasheet.vampire-blood.net/4634377\n'
+         '\n　つぎはぎアリス　　　　https://charasheet.vampire-blood.net/4634334\n'
+         '\n　きぐるいジャンク　　　https://charasheet.vampire-blood.net/2116483\n'
+         '\n　すてねこオートマトン　https://charasheet.vampire-blood.net/2116446\n')
+
 # セッションのコンポーネントのアクセスを簡略化
 asset = st.session_state
 get_button = st.button(label='変換', key='-convert-')
