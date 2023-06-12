@@ -25,7 +25,7 @@ if get_button and len(asset['-input-']) > 0:
         clip = str(convert.ch_data_js).replace('\'', '"')
 
         st.write('変換結果を表示します以下の文字列をコピーしてココフォリアに張り付けてください')
-        st.write(clip)
+        st.code(clip, 'json')
 
 
 
