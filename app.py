@@ -24,7 +24,7 @@ if get_button and len(asset['-input-']) > 0:
     target = asset['-input-'] + '.js'
     target_json = requests.get(target).json()
     if 'https://charasheet.vampire-blood.net' in target and target_json['game'] == 'nechro':
-        convert = Nccatcher(target_json)
+        convert = Nccatcher(target_json, asset['-input-'])
         clip = str(convert.ch_data_js).replace('\'', '"')
 
         st.write('変換結果を表示します以下の文字列をコピーしてココフォリアに張り付けてください\n'
