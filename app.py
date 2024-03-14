@@ -1,3 +1,4 @@
+import pyperclip
 import streamlit as st
 import requests
 from PC_Converter_for_web_class import Nccatcher
@@ -29,4 +30,5 @@ if get_button and len(asset['-input-']) > 0:
 
         st.write('変換結果を表示します以下の文字列をコピーしてココフォリアに張り付けてください\n'
                  'テキストボックス右端にカーソルを合わせるとコピーボタンが表示されます。')
+        pyperclip.copy(clip)
         st.code(clip, 'json')
